@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<span class="content-header">Blog</span>
+<p>Though most of my recently added articles are on the <a href="{{ SITEURL }}">homepage</a>, you can browse archives here.</p>
+
+<p>Filter by category:</p>
+{%- for category, articles in categories|sort %}
+        <li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a> ({{ articles|count }})</li>
+{% endfor %}
+<br />
+
+<p>Filter by tag:</p>
+{%- for tag, articles in tags|sort %}
+        <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a> ({{ articles|count }})</li>
+{% endfor %}
+
+<p>All posts: </p>
+<dl>
+{% for article in dates %}
+    <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a> - <span class="blogPageDate">{{ article.locale_date }}</span></dd>
+{% endfor %}
+</dl>
+</section>
+{% endblock %}

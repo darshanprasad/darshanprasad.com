@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="{{ DEFAULT_LANG }}">
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Darshan Prasad's Homepage on the Web">
+	<meta name="keywords" content="Darshan, Prasad, dgp, code, programming, blog, work, about">
+	<meta name="author" content="Darshan Prasad">	
+	<title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+	<link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" />
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<ul id="nav-links">
+				<li><a href="{{ SITEURL }}">home</a></li>
+				<li><a href="{{ SITEURL }}/blog">blog</a></li>
+				{% for p in PAGES %}
+					<li{% if p == page %} id="selected"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.slug }}</a></li>
+				{% endfor %}
+			</ul>
+			<span id="logo">Darshan Prasad</span>		
+		</div>
+		<div id="content">
+			{% block content %}
+			{% endblock content %}
+		</div>
+	</div>
+	<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/main.js" />
+</body>
+</html>

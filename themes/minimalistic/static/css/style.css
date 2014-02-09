@@ -1,0 +1,176 @@
+@import url(http://fonts.googleapis.com/css?family=Tenor+Sans|Source+Code+Pro|Lustria);
+
+body {
+	font-family: "Lustria";
+	font-size: 18px;
+	color: #303030;
+	background-color: #FFFFFF;
+}
+
+a {
+	color: #303030;
+	text-decoration: underline;
+}
+
+a:visited {
+	color: #303030;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #3399FF;
+}
+
+#container {
+	width: 700px;
+	margin-top: 20px;
+	margin-left: 100px;
+}
+
+#header {
+	width: 100%;
+}
+
+#logo {
+	font-family: "Source Code Pro";
+	letter-spacing: 4px;
+	font-size: 24px;
+	color: #A8A8A8;
+	text-transform: uppercase;
+}
+
+#nav-links {
+	display: inline-block;
+	float: right;
+	margin-top: 0px;
+	list-style-type: none;
+	text-transform: uppercase;
+}
+
+#nav-links li {
+	font-family: "Source Code Pro";
+	font-size: 20px;
+	display: inline-block;
+	margin-right: 26px;
+	/*transition: background-color 0.7s ease;*/
+	padding: 4px;
+}
+
+#nav-links li a {
+	color: #303030;
+	text-decoration: none;
+}
+
+#nav-links li a:visited {
+	text-decoration: none;
+	color: #303030;
+}
+
+#nav-links li a:hover {
+	text-decoration none;
+	color: #303030;
+}
+
+ul#nav-links li:last-child {
+	margin-right: 0px;
+	padding-right: 0px;
+}
+
+#nav-links li:hover {
+	border-bottom: 2pt solid #303030;
+	/*background-color: #D8D8D8;*/
+	cursor: pointer;
+}
+
+#selected {
+	border-bottom: 2pt solid #303030;
+}
+
+#aboutSelected {
+	border-bottom: 2pt solid #303030;
+}
+
+#blogSelected {
+	color: #217C7E;
+	border-bottom: 2pt solid #217C7E;
+}
+
+#content {
+	clear: both;
+	width: 100%;
+	margin-top: 80px;
+}
+
+#content p {
+	/*text-indent: 50px;*/
+	line-height: 2em;
+}
+
+.content-header {
+	display: block;
+	font-family: "Tenor Sans";
+	font-size: 30px;
+}
+
+#profile-pic {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	align: center;
+	margin-top: 30px;
+}
+
+.blogPost {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: justify;
+	line-height: 1.5em;
+	width: 100%;
+}
+
+.blogPostHeader {
+	font-family: "Lustria";
+	display: block;
+	width: 80%;
+	font-size: 30px;
+	/*color: #9A3334;*/
+	color: #505050;
+	margin-bottom: 8px;
+	margin-top: 40px;
+}
+
+.blogPostHeader a {
+	font-family: "Lustria";
+	color: #505050;
+	text-decoration: none;
+}
+
+.blogPostHeader a:visited {
+	font-family: "Lustria";
+	color: #505050;
+	text-decoration: none;
+}
+
+.blogPostHeader a:hover {
+	font-family: "Lustria";
+	color: #303030;
+	text-decoration: none;
+}
+
+.blogPostDate {
+	font-family: "Tenor Sans";
+	text-transform: uppercase;
+	display: block;
+	width: 80%;
+	font-size: 14px;
+	color: #737373;
+	margin-bottom: 30px;
+}
+
+.blogPageDate {
+	font-family: "Tenor Sans";
+	text-transform: uppercase;
+	font-size: 14px;
+	color: #737373;
+}
