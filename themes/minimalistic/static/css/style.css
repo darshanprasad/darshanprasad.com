@@ -82,7 +82,7 @@ ul#nav-links li:last-child {
 	cursor: pointer;
 }
 
-#selected {
+.selected {
 	border-bottom: 2pt solid #303030;
 }
 
