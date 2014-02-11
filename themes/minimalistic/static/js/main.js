@@ -1,9 +1,9 @@
 window.onload = function() {
-	var urlString = new String(window.location.href);
 	var selectedTab = document.getElementsByClassName("selected");
 	
 	if (selectedTab.length <= 0) {
-		if (urlString.match("blog")) {
+		var urlString = new String(window.location.href);
+		if (urlString.match(/darshanprasad\.com\/[a-zA-Z]+/)) {
 			document.getElementById('blog-tab').className = "selected";
 		} else {
 			document.getElementById('home-tab').className = "selected";
