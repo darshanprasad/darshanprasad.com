@@ -1,128 +1,144 @@
+@import url("reset.css");
 @import url(http://fonts.googleapis.com/css?family=Tenor+Sans|Source+Code+Pro|Lustria);
 
+@media all {
+	/* body */
+	body {
+		font-family: "Lustria";
+		color: #303030;
+		background-color: #FFFFFF;
+	}
+	
+	/* anchor tags */
+	a { color: #303030; text-decoration: underline; }
+	a:visited { color: #303030; text-decoration: underline; }
+	a:hover { color: #3399FF; }
+	#nav-links li a { color: #303030; text-decoration: none; }
+	#nav-links li a:visited { color: #303030; text-decoration: none; }
+	#nav-links li a:hover { color: #303030; text-decoration: none; }
+	.blog-post-title a { color: #505050; text-decoration: none; }
+	.blog-post-title a:visited { color: #505050; text-decoration: none; }
+	.blog-post-title a:hover { color: #303030; text-decoration: none; }
+	
+	/* header */
+	header {
+		width: 100%;
+	}
+	
+	/* logo */
+	#logo {
+		font-family: "Source Code Pro";
+		color: #A8A8A8;
+		text-transform: uppercase;
+	}
+	
+	/* nav */
+	nav {
+		width: 100%;
+	}
+	
+	#nav-links {
+		list-style-type: none;
+		text-transform: uppercase;
+	}
+	
+	#nav-links li { font-family: "Source Code Pro"; }
+	
+	/* main section classes */
+	.content-title {
+		font-family: "Tenor Sans";
+	}
+	
+	.blog-post-title {
+		font-family: "Lustria";
+		color: #505050;
+	}
+	
+	.blog-post-date {
+		font-family: "Tenor Sans";
+		text-transform: uppercase;
+		color: #737373;
+	}
+	
+	.blog-page-date {
+		font-family: "Tenor Sans";
+		text-transform: uppercase;
+		color: #737373;
+	}
+	
+}
+
+/* header */
+header {
+	text-align: right;
+}
+
+/* body */
 body {
-	font-family: "Lustria";
-	font-size: 18px;
-	color: #303030;
-	background-color: #FFFFFF;
+	font-size: 1.125em;
 }
 
-a {
-	color: #303030;
-	text-decoration: underline;
-}
-
-a:visited {
-	color: #303030;
-	text-decoration: underline;
-}
-
-a:hover {
-	color: #3399FF;
-}
-
+/* container */
 #container {
-	width: 700px;
-	margin-top: 20px;
-	margin-left: 100px;
-	margin-right: auto;
+	width: 70%;
+	margin-left: 6.250em;
+	margin-top: 1.250em;
 }
 
-#header {
-	width: 100%;
-}
-
+/* logo */
 #logo {
-	font-family: "Source Code Pro";
-	letter-spacing: 4px;
-	font-size: 24px;
-	color: #A8A8A8;
-	text-transform: uppercase;
+	vertical-align: middle;
+	display: inline-block;
+	float: left;
+	font-size: 1.5em;
+	letter-spacing: 0.250em;
+}
+
+/* nav */
+nav {
+	text-align: right;
 }
 
 #nav-links {
 	display: inline-block;
-	float: right;
-	margin-top: 0px;
-	list-style-type: none;
-	text-transform: uppercase;
 }
 
 #nav-links li {
-	font-family: "Source Code Pro";
-	font-size: 20px;
+	font-size: 1.250em;
 	display: inline-block;
-	margin-right: 26px;
-	/*transition: background-color 0.7s ease;*/
-	padding: 4px;
+	padding: 0.1em 0 0.250em 0;
+	margin-right: 1.625em;
 }
 
-#nav-links li a {
-	color: #303030;
-	text-decoration: none;
-}
-
-#nav-links li a:visited {
-	text-decoration: none;
-	color: #303030;
-}
-
-#nav-links li a:hover {
-	text-decoration none;
-	color: #303030;
-}
+#nav-links li:hover { border-bottom: 2pt solid #303030; cursor: pointer; }
 
 ul#nav-links li:last-child {
-	margin-right: 0px;
-	padding-right: 0px;
+	margin-right: 0;
+	padding-right: 0;
 }
 
-#nav-links li:hover {
-	border-bottom: 2pt solid #303030;
-	/*background-color: #D8D8D8;*/
-	cursor: pointer;
-}
+.selected { border-bottom: 2pt solid #303030; }
 
-.selected {
-	border-bottom: 2pt solid #303030;
-}
+/* paragraph tag */
+#main p { margin: 1.12em 0; line-height: 2em; }
 
-#aboutSelected {
-	border-bottom: 2pt solid #303030;
-}
-
-#blogSelected {
-	color: #217C7E;
-	border-bottom: 2pt solid #217C7E;
-}
-
-#content {
+/* main section classes */
+#main {
 	clear: both;
 	width: 100%;
-	margin-top: 80px;
+	margin-top: 5em;
 }
 
-#content p {
-	/*text-indent: 50px;*/
-	line-height: 2em;
-}
-
-.content-header {
+.content-title {
 	display: block;
-	font-family: "Tenor Sans";
-	font-size: 30px;
+	font-size: 1.875em;
 }
 
-#profile-pic {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 10px;
-	align: center;
-	margin-top: 30px;
+.blog-post {
+	margin-top: 2.5em;
 }
 
-.blogPost {
+.blog-post-content {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: justify;
@@ -130,48 +146,282 @@ ul#nav-links li:last-child {
 	width: 100%;
 }
 
-.blogPostHeader {
-	font-family: "Lustria";
+.blog-post-title {
+	display: block;
+	font-size: 1.875em;
+	margin-bottom: 0.5em;
+}
+
+.blog-post-date {
 	display: block;
 	width: 80%;
-	font-size: 30px;
-	/*color: #9A3334;*/
-	color: #505050;
-	margin-bottom: 8px;
-	margin-top: 40px;
+	font-size: 0.875em;
+	margin-bottom: 1.875em;
 }
 
-.blogPostHeader a {
-	font-family: "Lustria";
-	color: #505050;
-	text-decoration: none;
+.blog-page-date {
+	font-size: 0.875em;
 }
 
-.blogPostHeader a:visited {
-	font-family: "Lustria";
-	color: #505050;
-	text-decoration: none;
-}
-
-.blogPostHeader a:hover {
-	font-family: "Lustria";
-	color: #303030;
-	text-decoration: none;
-}
-
-.blogPostDate {
-	font-family: "Tenor Sans";
-	text-transform: uppercase;
+/* profile picture */
+#profile-pic {
+	background-image: url("http://darshanprasad.com/theme/images/profile_color.jpg");
+	background-repeat: no-repeat;
+	width: 475px;
+	height: 312px;
 	display: block;
-	width: 80%;
-	font-size: 14px;
-	color: #737373;
-	margin-bottom: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0.625em;
 }
 
-.blogPageDate {
-	font-family: "Tenor Sans";
-	text-transform: uppercase;
-	font-size: 14px;
-	color: #737373;
+
+@media screen and (max-width: 800px) {
+	/* header */
+	header {
+		text-align: inherit;
+	}
+	
+	/* body */
+	body {
+		font-size: 1.250em;
+	}
+	
+	/* container */
+	#container {
+		width: 90%;
+		margin: auto;
+	}
+	
+	/* logo */
+	#logo {
+		display: block;
+		width: 100%;
+		margin-top: 0.5em;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 1.12em;
+		font-size: 1.875em;
+		letter-spacing: 0.125em;
+		text-align: center;
+	}
+	
+	/* nav */
+	nav {
+		text-align: inherit;
+	}
+	
+	#nav-links {
+		display: block;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		/* float: right; */
+	}
+	
+	#nav-links li {
+		width: 20%;
+		font-size: 1.50em;
+		display: inline-block;
+		padding: 0.250em;
+		text-align: center;
+		margin-right: 0;
+	}
+	
+	#nav-links li:hover { border-bottom: none; }
+	
+	ul#nav-links li:last-child {
+		margin-right: 0;
+		padding-right: 0;
+	}
+	
+	.selected {
+		border-bottom: none;
+	}
+	
+	/* paragraph tag */
+	#main p { margin: 1.12em 0; line-height: 1.5em;}
+	
+	/* main section classes */
+	#main {
+		margin-top: 2.250em;
+	}
+	
+	.content-title {
+		display: block;
+		font-size: 1.875em;
+	}
+	
+	.blog-post {
+		margin-top: 2.250em;
+	}
+	
+	.blog-post-content {
+		margin-left: auto;
+		margin-right: auto;
+		line-height: 1.5em;
+		width: 100%;
+	}
+	
+	.blog-post-title {
+		display: block;
+		width: 80%;
+		font-size: 2.125em;
+		margin-bottom: 0.5em;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+	
+	.blog-post-date {
+		display: block;
+		width: 80%;
+		font-size: 0.875em;
+		margin-bottom: 1.875em;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+	
+	.blog-page-date {
+		font-size: 0.875em;
+	}
+	
+	/* profile picture */
+	#profile-pic {
+		background-image: url("http://darshanprasad.com/theme/images/profile_color.jpg");
+		background-repeat: no-repeat;
+		width: 475px;
+		height: 312px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 0.625em;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	/* header */
+	header {
+		text-align: inherit;
+	}
+	
+	/* body */
+	body {
+		font-size: 1.125em;
+	}
+	
+	/* container */
+	#container {
+		width: 90%;
+		margin: auto;
+	}
+	
+	/* logo */
+	#logo {
+		display: block;
+		width: 100%;
+		margin-top: 0.5em;
+		margin-bottom: 1.12em;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 1.5em;
+		letter-spacing: 0.125em;
+		text-align: center;
+	}
+	
+	/* nav */
+	nav {
+		text-align: inherit;
+	}
+	
+	#nav-links {
+		display: block;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		/* float: right; */
+	}
+	
+	#nav-links li {
+		width: 21%;
+		font-size: 1.250em;
+		display: inline-block;
+		padding: 0.250em;
+		text-align: center;
+		margin-right: 0;
+	}
+	
+	#nav-links li:hover { border-bottom: none; }
+	
+	ul#nav-links li:last-child {
+		margin-right: 0;
+		padding-right: 0;
+	}
+	
+	.selected {
+		border-bottom: none;
+	}
+	
+	/* paragraph tag */
+	#main p { margin: 1.12em 0; line-height: 1.5em; }
+	
+	/* main section classes */
+	#main {
+		margin-top: 2.5em;
+	}
+	
+	.content-title {
+		display: block;
+		font-size: 1.875em;
+	}
+	
+	.blog-post {
+		margin-top: 2.5em;
+	}
+	
+	.blog-post-content {
+		margin-left: auto;
+		margin-right: auto;
+		line-height: 1.5em;
+		width: 100%;
+	}
+	
+	.blog-post-title {
+		display: block;
+		width: 80%;
+		font-size: 1.875em;
+		margin-bottom: 0.5em;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+	
+	.blog-post-date {
+		display: block;
+		width: 80%;
+		font-size: 0.875em;
+		margin-bottom: 1.875em;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+	
+	.blog-page-date {
+		font-size: 0.875em;
+	}
+	
+	/* profile picture */
+	#profile-pic {
+		background-image: url("http://darshanprasad.com/theme/images/profile_small.jpg");
+		background-repeat: no-repeat;
+		width: 300px;
+		height: 197px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 0.625em;
+	}
 }
