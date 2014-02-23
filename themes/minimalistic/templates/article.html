@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 {% block title %}{{ article.title|striptags }}{% endblock %}
 {% block content %}
-      <span class="blogPostHeader">
-        <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
-           title="Permalink to {{ article.title|striptags }}">{{ article.title}}</a>
-	  </span>
-	  <span class="blogPostDate">{% include 'article_infos.html' %}</span>
-	  <div class="blogPost">
-	  	{{ article.content }}
-	  </div>
+		<article class="blog-post">
+			<span class="blog-post-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
+           title="Permalink to {{ article.title|striptags }}">{{ article.title}}</a></span>
+			<time class="blog-post-date">{% include 'article_infos.html' %}</time>
+			<div class="blog-post-content">
+			{{ article.content }}
+			</div>
+		</article>
 {% endblock %}
 

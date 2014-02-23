@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-<span class="content-header">Blog</span>
+<span class="content-title">Blog</span>
 <p>Though most of my recently added articles are on the <a href="{{ SITEURL }}">homepage</a>, you can browse archives here.</p>
 
 <p>Filter by category:</p>
@@ -17,8 +17,7 @@
 <p>All posts: </p>
 <dl>
 {% for article in dates %}
-    <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a> - <span class="blogPageDate">{{ article.locale_date }}</span></dd>
+    <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a> - <time class="blog-page-date">{{ article.locale_date }}</time></dd>
 {% endfor %}
 </dl>
-</section>
 {% endblock %}

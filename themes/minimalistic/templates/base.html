@@ -5,27 +5,31 @@
 	<meta name="description" content="Darshan Prasad's Homepage on the Web">
 	<meta name="keywords" content="Darshan, Prasad, dgp, code, programming, blog, work, about">
 	<meta name="author" content="Darshan Prasad">
-	<meta name="viewport" content="width=device-width, maximum-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	<title>{% block title %}{{ SITENAME }}{% endblock %}</title>
 	<link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" />
 </head>
 <body>
 	<div id="container">
-		<div id="header">
-			<ul id="nav-links">
-				<li id="home-tab"><a href="{{ SITEURL }}">home</a></li>
-				<li id="blog-tab"><a href="{{ SITEURL }}/blog">blog</a></li>
-				{% for p in PAGES %}
+		<header>
+			<span id="logo">Darshan Prasad</span>
+			<nav>
+				<ul id="nav-links">
+					<li id="home-tab"><a href="{{ SITEURL }}">home</a></li>
+					<li id="blog-tab"><a href="{{ SITEURL }}/blog">blog</a></li>
+					{% for p in PAGES %}
 					<li id="{{p.slug}}-tab"{% if p == page %} class="selected"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.slug }}</a></li>
-				{% endfor %}
-			</ul>
-			<span id="logo">Darshan Prasad</span>		
-		</div>
-		<div id="content">
+					{% endfor %}
+				</ul>
+			</nav>
+		</header>
+		<div id="main">
 			{% block content %}
 			{% endblock content %}
 		</div>
 	</div>
+	<footer>
+	</footer>
 	<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/main.js"></script>
 </body>
 </html>

@@ -3,12 +3,14 @@
 {% block content %}
 {% if articles %}
 	{% for article in articles_page.object_list %}
-	<span class="blogPostHeader"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></span>
-	<span class="blogPostDate">{% include 'article_infos.html' %}</span>
-	<div class="blogPost">
-		{{ article.summary }}
-		<a href="{{ SITEURL }}/{{ article.url }}">Read More</a>
-	</div>
+		<article class="blog-post">
+			<span class="blog-post-title"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title}}</a></span>
+			<time class="blog-post-date">{% include 'article_infos.html' %}</time>
+			<div class="blog-post-content">
+				{{ article.summary }}
+			</div>
+			<a href="{{ SITEURL }}/{{ article.url }}">Read More</a>
+		</article>
     {% if loop.last %}
         {% if loop.last and (articles_page.has_previous()
         or not articles_page.has_previous() and loop.length > 1) %}
