@@ -5,7 +5,7 @@
 	{% for article in articles_page.object_list %}
 		<article class="blog-post">
 			<span class="blog-post-title"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title}}</a></span>
-			<time class="blog-post-date">{% include 'article_infos.html' %}</time>
+			<time datetime="{{ article.date }}" class="blog-post-date">{% include 'article_infos.html' %}</time>
 			<div class="blog-post-content">
 				{{ article.summary }}
 			</div>

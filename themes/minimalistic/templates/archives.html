@@ -17,7 +17,7 @@
 <p>All posts: </p>
 <dl>
 {% for article in dates %}
-    <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a> - <time class="blog-page-date">{{ article.locale_date }}</time></dd>
+    <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a> - <time datetime="{{ article.date }}" class="blog-page-date">{{ article.locale_date }}</time></dd>
 {% endfor %}
 </dl>
 {% endblock %}
